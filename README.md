@@ -144,8 +144,10 @@ Seeding is safe to run again. It upserts records, and it won't overwrite setting
 npm run dev
 ```
 
-- Website: http://localhost:3000
-- Admin: http://localhost:3000/admin (sign in with your `SEED_ADMIN_*` credentials)
+- Local website: http://localhost:3000
+- Local admin: http://localhost:3000/admin (sign in with your `SEED_ADMIN_*` credentials)
+
+> These `localhost` addresses work only on the computer running `npm run dev`; they are not public GitHub links. GitHub stores this project's source code but does not run the app. For public access, deploy it to a Next.js host such as Netlify or Vercel, then use the URL that host assigns. GitHub Pages is not suitable because this app uses server-rendered pages, API routes, and PostgreSQL.
 
 > **Change the seeded admin password** right away in Admin → Settings → Change password.
 
