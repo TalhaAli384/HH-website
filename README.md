@@ -185,6 +185,13 @@ npm run dev
 
 > Public pages are statically generated and revalidated, so **the database must be reachable during `next build`**.
 
+### Netlify
+
+1. Connect the GitHub repository to a Netlify project and deploy the `main` branch. Do not upload the source folder with Netlify Drop.
+2. Add `DATABASE_URL`, `AUTH_SECRET`, and `NEXT_PUBLIC_SITE_URL` under Project configuration → Environment variables. The database must be reachable during both the build and runtime. Configure Cloudinary for persistent image uploads.
+3. `netlify.toml` runs `npm run db:deploy` before the production build so migrations are applied on each deploy.
+4. After the database is provisioned, seed it once from your machine using the production `DATABASE_URL` and `SEED_ADMIN_*` values, as shown above.
+
 ### VPS / Docker / any Node host
 
 ```bash
